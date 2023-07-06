@@ -20,12 +20,16 @@ body {
 	display: flex;
 	justify-content: space-between;
 	padding: 1.6rem;
-	box-shadow: 1px 1px 10px black;
+	box-shadow: 1px 1px 2px #4f4f4f;
+	margin-top: 2rem;
+	border-radius: 1rem;
+	max-width: 80%;
+	margin: 2rem auto;
 }
 
 .logo img {
 	width: 100%;
-	max-width: 12rem;
+	max-width: 6rem;
 }
 
 .logo {
@@ -44,6 +48,37 @@ body {
 	height: 3rem;
 	border-radius: 50%;
 	background: gray;
+}
+
+.addTask {
+	padding: 2rem;
+	gap: 1rem;
+	border: 1px solid lightgray;
+	border-radius: 0.5rem;
+	max-width: min-content;
+	margin: 2rem auto;
+}
+
+.addTask .taskInput {
+	padding: 0.5rem 1rem;
+	width: 36rem;
+	border: 2px solid lightgray;
+	border-radius: 0.4rem;
+	line-height: 2em;
+}
+
+.addTask .btn {
+	border: 0;
+	padding: 0.8rem 1rem;
+	width: 6rem;
+	background: lightgreen;
+	border-radius: 0.4rem;
+	cursor: pointer;
+	color: white;
+}
+
+.btn:hover {
+	background: darkseagreen;
 }
 
 /* utilisty classes for flexbox */
