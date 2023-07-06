@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+	/* font-family: "Inconsolata", monospace; */
+}
+
+body {
+	font-size: 1.6rem;
+	max-width: 1280px;
+	margin: 0 auto;
+	font-family: "Space Mono", monospace;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 1.6rem;
+	box-shadow: 1px 1px 10px black;
+}
+
+.logo img {
+	width: 100%;
+	max-width: 12rem;
+}
+
+.logo {
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.themeSelector {
+	width: 26rem;
+	justify-content: space-around;
+	padding: 1rem;
+}
+
+.themeSelector > span {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	background: gray;
+}
+
+/* utilisty classes for flexbox */
+.flex-container {
+	display: flex;
+	align-items: center;
+}
