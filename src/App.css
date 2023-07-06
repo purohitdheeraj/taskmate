@@ -19,11 +19,11 @@ body {
 .header {
 	display: flex;
 	justify-content: space-between;
-	padding: 1.6rem;
-	box-shadow: 1px 1px 2px #4f4f4f;
+	padding: 2rem;
 	margin-top: 2rem;
-	border-radius: 1rem;
-	max-width: 80%;
+	border-radius: 4px;
+	border: 1px solid lightgray;
+	max-width: 90%;
 	margin: 2rem auto;
 }
 
@@ -54,31 +54,68 @@ body {
 	padding: 2rem;
 	gap: 1rem;
 	border: 1px solid lightgray;
-	border-radius: 0.5rem;
+	border-radius: 0.4rem;
 	max-width: min-content;
-	margin: 2rem auto;
+	margin: 4rem auto;
 }
 
 .addTask .taskInput {
-	padding: 0.5rem 1rem;
+	padding: 1rem;
 	width: 36rem;
 	border: 2px solid lightgray;
-	border-radius: 0.4rem;
-	line-height: 2em;
+	border-radius: 4px;
 }
 
 .addTask .btn {
 	border: 0;
 	padding: 0.8rem 1rem;
 	width: 6rem;
-	background: lightgreen;
-	border-radius: 0.4rem;
+	background: hsla(110, 80%, 40%, 1);
+	border-radius: 4px;
 	cursor: pointer;
 	color: white;
 }
 
-.btn:hover {
-	background: darkseagreen;
+.addTask .btn:hover {
+	background: hsla(110, 60%, 30%, 1);
+}
+
+.showTask {
+	margin: 0 auto;
+	border: 1px solid lightgray;
+	width: 90%;
+	padding: 2rem;
+	border-radius: 4px;
+	padding-bottom: 6rem;
+}
+
+.showTask .heading {
+	justify-content: space-between;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid lightgray;
+}
+
+.title {
+	gap: 1rem;
+	font-size: 1.2rem;
+}
+
+.title .count {
+	background: lightgray;
+	border-radius: 30%;
+	padding: 0.4rem;
+}
+
+.btn {
+	border: 0;
+	padding: 1rem;
+	border-radius: 4px;
+	cursor: pointer;
+	color: #fff;
+}
+
+.showTask .heading .btn {
+	background: hsla(210, 100%, 60%, 1);
 }
 
 /* utilisty classes for flexbox */
