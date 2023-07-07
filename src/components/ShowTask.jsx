@@ -1,7 +1,8 @@
 import React from "react";
 
 export const ShowTask = (props) => {
-	const { tasks, deleteTask, editTask } = props;
+	const { tasks, deleteTask, editTask, clearAllTasks } =
+		props;
 
 	const cardsEl = tasks.map((task) => {
 		return (
@@ -36,7 +37,10 @@ export const ShowTask = (props) => {
 					<span className="count">{tasks.length}</span>
 				</div>
 
-				<button className="btn btn-clearAll">
+				<button
+					className="btn btn-clearAll"
+					onClick={() => clearAllTasks()}
+				>
 					Clear All
 				</button>
 			</div>

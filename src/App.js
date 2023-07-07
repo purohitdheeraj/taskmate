@@ -2,8 +2,8 @@ import { useState } from "react";
 import { AddTask } from "./components/AddTask";
 import { Header } from "./components/Header";
 import { ShowTask } from "./components/ShowTask";
-import "./App.css";
 import { createUniqueId, getDateAndTime } from "./utils";
+import "./App.css";
 
 function App() {
 	const [tasks, setTasks] = useState([]);
@@ -18,6 +18,10 @@ function App() {
 			timestamp: getDateAndTime(),
 		};
 		setTasks((prevTasks) => [...prevTasks, newTask]);
+	};
+
+	const clearAllTasks = () => {
+		setTasks([]);
 	};
 
 	const deleteTask = (id) => {
@@ -57,6 +61,7 @@ function App() {
 	return (
 		<div className="App">
 			<Header />
+
 			<AddTask
 				addTask={addTask}
 				inputValue={inputValue}
@@ -64,10 +69,12 @@ function App() {
 				editingStatus={editingStatus}
 				updateTask={updateTask}
 			/>
+
 			<ShowTask
 				tasks={tasks}
 				deleteTask={deleteTask}
 				editTask={editTask}
+				clearAllTasks={clearAllTasks}
 			/>
 		</div>
 	);
