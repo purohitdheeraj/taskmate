@@ -123,7 +123,6 @@ body {
 
 .cardsWrapper {
 	justify-content: center;
-
 	padding: 2rem;
 	gap: 2rem;
 	flex-wrap: wrap;
@@ -151,6 +150,10 @@ body {
 .cardInfo .date {
 	font-size: 1.2rem;
 	color: gray;
+}
+
+.cardActions > span {
+	cursor: pointer;
 }
 
 /* utilisty classes for flexbox */
