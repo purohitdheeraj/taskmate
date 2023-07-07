@@ -13,6 +13,19 @@ export const ShowTask = () => {
 					Clear All
 				</button>
 			</div>
+			<div className="cardsWrapper flex-container">
+				<div className="card">
+					<div className="cardInfo">
+						<p className="cardTitle">hare krishna</p>
+						<span className="date">time am/pm date</span>
+					</div>
+
+					<div className="cardActions">
+						<span className="cardIcon">📝</span>
+						<span className="cardIcon">🗑️</span>
+					</div>
+				</div>
+			</div>
 		</section>
 	);
 };
