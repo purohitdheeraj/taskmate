@@ -10,6 +10,7 @@ function App() {
 	const [inputValue, setInputValue] = useState("");
 	const [editingStatus, setEditingStatus] = useState(false);
 	const [currentId, setCurrentId] = useState(null);
+	const [inputError, setInputError] = useState(false);
 
 	const addTask = (inputValue) => {
 		const newTask = {
@@ -68,6 +69,8 @@ function App() {
 				setInputValue={setInputValue}
 				editingStatus={editingStatus}
 				updateTask={updateTask}
+				inputError={inputError}
+				setInputError={setInputError}
 			/>
 
 			<ShowTask
