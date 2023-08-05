@@ -15,7 +15,7 @@ function App() {
 	const [currentId, setCurrentId] = useState(null);
 	const [inputError, setInputError] = useState(false);
 
-	const { theme, setTheme } = useTheme();
+	const { theme } = useTheme();
 
 	useEffect(() => {
 		window.localStorage.setItem(

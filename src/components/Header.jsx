@@ -5,6 +5,8 @@ import { useTheme } from "../themeProvider";
 export const Header = ({ children }) => {
 	const { theme, setTheme } = useTheme();
 
+
+
 	return (
 		<header className="header">
 			<div className="logo flex-container">
