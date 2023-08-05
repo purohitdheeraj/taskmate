@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AddTask } from "./components/AddTask";
 import { Header } from "./components/Header";
 import { ShowTask } from "./components/ShowTask";
@@ -6,11 +6,20 @@ import { createUniqueId, getDateAndTime } from "./utils";
 import "./App.css";
 
 function App() {
-	const [tasks, setTasks] = useState([]);
+	const [tasks, setTasks] = useState(() => {
+		return JSON.parse(localStorage.getItem("tasks")) || [];
+	});
 	const [inputValue, setInputValue] = useState("");
 	const [editingStatus, setEditingStatus] = useState(false);
 	const [currentId, setCurrentId] = useState(null);
 	const [inputError, setInputError] = useState(false);
+
+	useEffect(() => {
+		window.localStorage.setItem(
+			"tasks",
+			JSON.stringify(tasks)
+		);
+	}, [tasks]);
 
 	const addTask = (inputValue) => {
 		const newTask = {

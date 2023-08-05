@@ -30,11 +30,13 @@ export const AddTask = (props) => {
 		if (inputValue.trim("").length > 0) {
 			if (event.key === "Enter") {
 				addTask(inputValue);
+				setInputValue("")
 			}
 			setInputError(false);
 		} else {
 			setInputError(true);
 		}
+		
 	};
 
 	return (
