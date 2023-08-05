@@ -30,7 +30,7 @@ Task Mate is a stunning and user-friendly task management app that allows you to
 
 Follow these simple steps to get Task Mate up and running:
 
-1. Clone this repository to your local machine using `git clone https://github.com/your-username/task-mate.git`.
+1. Clone this repository to your local machine using `https://github.com/purohitdheeraj/taskmate.git`.
 
 2. Navigate to the project directory: `cd task-mate`.
 
