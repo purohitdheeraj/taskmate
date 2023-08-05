@@ -1,7 +1,10 @@
 import React from "react";
 import Logo from "../assets/logo.png";
+import { useTheme } from "../themeProvider";
 
-export const Header = ({ children, theme, setTheme }) => {
+export const Header = ({ children }) => {
+	const { theme, setTheme } = useTheme();
+
 	return (
 		<header className="header">
 			<div className="logo flex-container">

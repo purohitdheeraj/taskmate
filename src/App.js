@@ -4,6 +4,7 @@ import { Header } from "./components/Header";
 import { ShowTask } from "./components/ShowTask";
 import { createUniqueId, getDateAndTime } from "./utils";
 import "./App.css";
+import { useTheme } from "./themeProvider";
 
 function App() {
 	const [tasks, setTasks] = useState(() => {
@@ -14,9 +15,7 @@ function App() {
 	const [currentId, setCurrentId] = useState(null);
 	const [inputError, setInputError] = useState(false);
 
-	const [theme, setTheme] = useState(
-		localStorage.getItem("theme") || "medium"
-	);
+	const { theme, setTheme } = useTheme();
 
 	useEffect(() => {
 		window.localStorage.setItem(
@@ -24,10 +23,6 @@ function App() {
 			JSON.stringify(tasks)
 		);
 	}, [tasks]);
-
-	useEffect(() => {
-		window.localStorage.setItem("theme", theme);
-	}, [theme]);
 
 	const addTask = (inputValue) => {
 		const newTask = {
@@ -78,9 +73,7 @@ function App() {
 
 	return (
 		<div className={"App " + theme}>
-			<Header theme={theme} setTheme={setTheme}>
-				TaskMate
-			</Header>
+			<Header>TaskMate</Header>
 
 			<AddTask
 				addTask={addTask}
