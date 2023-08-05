@@ -73,24 +73,26 @@ function App() {
 
 	return (
 		<div className={"App " + theme}>
-			<Header>TaskMate</Header>
+			<div className="container">
+				<Header>TaskMate</Header>
 
-			<AddTask
-				addTask={addTask}
-				inputValue={inputValue}
-				setInputValue={setInputValue}
-				editingStatus={editingStatus}
-				updateTask={updateTask}
-				inputError={inputError}
-				setInputError={setInputError}
-			/>
+				<AddTask
+					addTask={addTask}
+					inputValue={inputValue}
+					setInputValue={setInputValue}
+					editingStatus={editingStatus}
+					updateTask={updateTask}
+					inputError={inputError}
+					setInputError={setInputError}
+				/>
 
-			<ShowTask
-				tasks={tasks}
-				deleteTask={deleteTask}
-				editTask={editTask}
-				clearAllTasks={clearAllTasks}
-			/>
+				<ShowTask
+					tasks={tasks}
+					deleteTask={deleteTask}
+					editTask={editTask}
+					clearAllTasks={clearAllTasks}
+				/>
+			</div>
 		</div>
 	);
 }

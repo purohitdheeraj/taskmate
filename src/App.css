@@ -14,14 +14,14 @@ html {
 	font-size: 62.5%;
 }
 
-body {
+.container {
 	font-size: 1.6rem;
 	max-width: 1280px;
 	margin: 0 auto;
 	font-family: "Space Mono", monospace;
 }
 
-.App{
+.App {
 	min-height: 100vh;
 	padding: 1rem;
 }
@@ -62,24 +62,21 @@ body {
 
 .activeTheme {
 	scale: 1.2;
-	transition: all 500ms;
 	color: #fff;
+	transition: all 500ms;
 }
 
 .light {
 	background-color: #ffffff;
-	transition: all 500ms;
 }
 
 .medium {
 	background-color: #efefef;
-	transition: all 500ms;
 }
 
 .dark {
 	background-color: #15202b;
 	color: #fff;
-	transition: all 500ms;
 }
 
 .gradientOne {
