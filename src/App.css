@@ -2,6 +2,12 @@
 *::before,
 *::after {
 	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+		rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 html {
@@ -15,11 +21,15 @@ body {
 	font-family: "Space Mono", monospace;
 }
 
+.App{
+	min-height: 100vh;
+	padding: 1rem;
+}
+
 .header {
 	display: flex;
 	justify-content: space-between;
 	padding: 1rem 2rem;
-	margin-top: 2rem;
 	border-radius: 4px;
 	border: 1px solid lightgray;
 	max-width: 90%;
@@ -46,7 +56,101 @@ body {
 	width: 3rem;
 	height: 3rem;
 	border-radius: 50%;
-	background: gray;
+	border: 1px solid lightgray;
+	cursor: pointer;
+}
+
+.activeTheme {
+	scale: 1.2;
+	transition: all 500ms;
+	color: #fff;
+}
+
+.light {
+	background-color: #ffffff;
+	transition: all 500ms;
+}
+
+.medium {
+	background-color: #efefef;
+	transition: all 500ms;
+}
+
+.dark {
+	background-color: #15202b;
+	color: #fff;
+	transition: all 500ms;
+}
+
+.gradientOne {
+	background: linear-gradient(
+		90deg,
+		hsla(191, 75%, 60%, 1) 0%,
+		hsla(248, 87%, 36%, 1) 100%
+	);
+}
+.gradientTwo {
+	background: linear-gradient(
+			235deg,
+			#ffffff 0%,
+			#000f25 100%
+		),
+		linear-gradient(180deg, #6100ff 0%, #000000 100%),
+		linear-gradient(
+			235deg,
+			#ffa3ac 0%,
+			#ffa3ac 40%,
+			#00043c calc(40% + 1px),
+			#00043c 60%,
+			#005d6c calc(60% + 1px),
+			#005d6c 70%,
+			#00c9b1 calc(70% + 1px),
+			#00c9b1 100%
+		),
+		linear-gradient(
+			125deg,
+			#ffa3ac 0%,
+			#ffa3ac 40%,
+			#00043c calc(40% + 1px),
+			#00043c 60%,
+			#005d6c calc(60% + 1px),
+			#005d6c 70%,
+			#00c9b1 calc(70% + 1px),
+			#00c9b1 100%
+		);
+	background-blend-mode: soft-light, screen, darken, normal;
+	color: #fff;
+}
+
+.gradientThree {
+	background: linear-gradient(
+			125deg,
+			#ffffff 0%,
+			#000000 100%
+		),
+		linear-gradient(
+			200deg,
+			#ffd9e8 0%,
+			#ffd9e8 50%,
+			#de95ba calc(50% + 1px),
+			#de95ba 60%,
+			#7f4a88 calc(60% + 1px),
+			#7f4a88 75%,
+			#4a266a calc(75% + 1px),
+			#4a266a 100%
+		),
+		linear-gradient(
+			113deg,
+			#ffd9e8 0%,
+			#ffd9e8 40%,
+			#de95ba calc(40% + 1px),
+			#de95ba 50%,
+			#7f4a88 calc(50% + 1px),
+			#7f4a88 70%,
+			#4a266a calc(70% + 1px),
+			#4a266a 100%
+		);
+	background-blend-mode: overlay, overlay, normal;
 }
 
 .addTask {

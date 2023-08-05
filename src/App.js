@@ -14,12 +14,20 @@ function App() {
 	const [currentId, setCurrentId] = useState(null);
 	const [inputError, setInputError] = useState(false);
 
+	const [theme, setTheme] = useState(
+		localStorage.getItem("theme") || "medium"
+	);
+
 	useEffect(() => {
 		window.localStorage.setItem(
 			"tasks",
 			JSON.stringify(tasks)
 		);
 	}, [tasks]);
+
+	useEffect(() => {
+		window.localStorage.setItem("theme", theme);
+	}, [theme]);
 
 	const addTask = (inputValue) => {
 		const newTask = {
@@ -69,8 +77,10 @@ function App() {
 	};
 
 	return (
-		<div className="App">
-			<Header />
+		<div className={"App " + theme}>
+			<Header theme={theme} setTheme={setTheme}>
+				TaskMate
+			</Header>
 
 			<AddTask
 				addTask={addTask}
